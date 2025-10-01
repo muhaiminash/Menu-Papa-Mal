@@ -1,0 +1,57 @@
+<html>
+<head>
+    <title>Resit Pembayaran</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f9f9f9;
+            text-align: center;
+            padding: 30px;
+        }
+        .resit {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+            display: inline-block;
+            text-align: left;
+        }
+        h2 {
+            color: tomato;
+            margin-bottom: 20px;
+        }
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background: #28a745;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #218838;
+        }
+    </style>
+</head>
+<body>
+    <div class="resit">
+        <h2>Resit Pembayaran</h2>
+        <p><b>Menu:</b> <span id="menu"></span></p>
+        <p><b>Harga:</b> <span id="harga"></span></p>
+        <button onclick="submitOrder()">Submit</button>
+    </div>
+
+    <script>
+        // ambil data dari URL
+        const urlParams = new URLSearchParams(window.location.search);
+        document.getElementById("menu").textContent = urlParams.get("menu");
+        document.getElementById("harga").textContent = urlParams.get("harga");
+
+        function submitOrder() {
+            alert("Pesanan berjaya dihantar!");
+            window.location.href = "index.html"; // kembali ke menu
+        }
+    </script>
+</body>
+</html>

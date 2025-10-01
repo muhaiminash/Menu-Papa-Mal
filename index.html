@@ -1,0 +1,125 @@
+<html>
+<head>
+    <title>Menu Nasi Lemak</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f9f9f9;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        h1 marquee {
+            font-size: 28px;
+            font-weight: bold;
+            color: #f9f9f9;
+        }
+
+        h1 {
+            color: tomato;
+            margin-top: 10px;
+        }
+
+        h2 {
+            color: #444;
+            margin-bottom: 20px;
+        }
+
+        table {
+            margin: auto;
+            width: 80%;
+            border-collapse: collapse;
+            background: white;
+            box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 15px;
+            text-align: center;
+        }
+
+        th {
+            background: #ff6347;
+            color: white;
+            font-size: 18px;
+        }
+
+        td img {
+            border-radius: 10px;
+        }
+
+        button {
+            padding: 8px 15px;
+            background: #28a745;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        button:hover {
+            background: #218838;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>
+        <marquee direction="right" bgcolor="red">SELAMAT DATANG</marquee>
+    </h1>
+
+    <h1>NASI LEMAK PAPA MAL</h1>
+    <h2>TERBAIK DI KVS</h2>
+
+    <table>
+        <tr>
+            <th>MENU</th>
+            <th>HARGA</th>
+            <th>ORDER</th>
+        </tr>
+
+        <tr>
+            <td>
+                <img src="Ns3.jpeg" width="250" height="175"><br>
+                NASI LEMAK AYAM MASAK MERAH
+            </td>
+            <td>RM 7.00</td>
+            <td><button onclick="pesan('Nasi Lemak Ayam Masak Merah', 'RM 7.00')">Pesan</button></td>
+
+        </tr>
+
+        <tr>
+            <td>
+                <img src="Ns2.jpeg" width="250" height="175"><br>
+                NASI LEMAK AYAM RENDANG
+            </td>
+            <td>RM 7.00</td>
+            <td><button onclick="pesan('Nasi Lemak Ayam Rendang', 'RM 7.00')">Pesan</button></td>
+
+        </tr>
+
+        <tr>
+            <td>
+                <img src="Ns1.jpeg" width="250" height="175"><br>
+                NASI LEMAK KERANG
+            </td>
+            <td>RM 5.00</td>
+            <td><button onclick="pesan('Nasi Lemak Kerang', 'RM 5.00')">Pesan</button></td>
+        </tr>
+    </table>
+	
+	<script>
+    function pesan(menu, harga) {
+        // redirect ke resit.html dengan data menu & harga
+        window.location.href = "resit.html?menu=" + encodeURIComponent(menu) + "&harga=" + encodeURIComponent(harga);
+    }
+</script>
+
+
+</body>
+</html>
